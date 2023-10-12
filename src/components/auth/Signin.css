@@ -1,0 +1,174 @@
+.signin-container{
+    display: flex;
+     height: 100vh;
+    /* width: 100vw; */ 
+}
+.sideDiv{
+   display: flex;
+   flex-direction: column;
+    flex: 1;
+    background-color: #3C79F5;
+    transform: skewX(-10deg); /* Adjust the angle of the tilt */
+    transform-origin: top; /* Set the origin at the top */
+}
+.Logo{
+    flex: 1;
+    background-color: #3C79F5;
+    color: white;
+    margin-top: 20px;
+    margin-left: 50px;
+   
+    font-weight: bold;
+    font-size: 30px;
+}
+.board{
+    flex: 1;
+    background-color: #3C79F5;
+    color: white;
+    /* margin-top: 30px;
+    margin-left: 250px; */
+    margin: auto;
+    font-weight: bold;
+    font-size: 60px;
+}
+.icons{
+    flex: 1;
+    background-color: #3C79F5;
+    margin: auto;
+}
+.github{
+    background-color: #3C79F5;
+    color: white;
+    font-size: large;
+    margin-left: 20px ;
+}
+.formDiv{
+    /* margin-top: 300px; */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: auto;
+    justify-content: center;
+    flex-direction: column;
+    /* margin-left: 200px; */
+    margin: auto;
+   
+}
+.signinForm{
+    display: flex;
+    flex: 1;
+    padding: auto;
+    flex-direction: column;
+    
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+
+}
+.google{
+    background-color: white;
+    margin-left: 12px;
+    outline: none;
+    border: none;
+    height: 35px;
+    width: 185px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+   display: flex;
+   align-items: center;
+        justify-content: center;
+}
+.text{
+    margin-bottom: 10px;
+}
+.apple{
+        border-radius: 10px;;
+        background-color: white;
+        margin-left: 12px;
+        outline: none;
+        border: none;
+        height: 35px;
+        width: 185px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+.p{
+    margin-bottom: 5px;
+    background-color: white;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.image{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+.whiteDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    /* height: 300px;
+    width:400px */
+    height: 100%;
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+.parae{
+    background-color: white;
+    margin-left: -219px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.parap{
+    background-color: white;
+    margin-left: -250px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.email{
+    border-radius: 10px;
+    height: 40px;
+    width:80%;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+    
+}
+.password{
+    border-radius: 10px;
+    height: 40px;
+    width:80%;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+}
+.forgot{
+    color: #3C79F5;
+    background-color: white;
+    margin-left: -200px;
+}
+.Submit{
+    border-radius: 10px;
+    height: 40px;
+    width:80%;
+    background-color: #3C79F5;
+    color: white;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+.register{
+    color: #3C79F5;
+}
+.signup{
+    /* margin-top: 10px;
+    margin-left: -60px; */
+}
