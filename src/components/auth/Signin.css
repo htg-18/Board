@@ -59,7 +59,6 @@
     flex: 1;
     padding: auto;
     flex-direction: column;
-    
 }
 .buttons{
     display: flex;
@@ -139,7 +138,7 @@
     outline: none;
     border: none;
     margin-bottom: 10px;
-    
+    padding-left: 9px;
 }
 .password{
     border-radius: 10px;
@@ -148,6 +147,7 @@
     outline: none;
     border: none;
     margin-bottom: 10px;
+    padding-left: 9px;
 }
 .forgot{
     color: #3C79F5;
@@ -171,4 +171,6 @@
 .signup{
     /* margin-top: 10px;
     margin-left: -60px; */
+    margin-top: 13px;
+    margin:13px auto;
 }
