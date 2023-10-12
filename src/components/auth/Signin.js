@@ -84,7 +84,7 @@ const Signin = () => {
             <button className='Submit' type="submit">SignIn</button>
             
          </div>
-         <p className='signup'>Dont have an account?<span className='register'>Register Here</span></p>
+         <p className='signup'>Dont have an account?  <span className='register'>Register Here</span></p>
        </form>
        
        </div>
