@@ -172,3 +172,92 @@
     /* margin-top: 10px;
     margin-left: -60px; */
 }
+
+/* This targets devices with a maximum width of 767 pixels (common for phones) */
+@media (max-width: 1100px) {
+    .signin-container{
+        display: flex;
+        flex-direction: column;
+         height: 100vh;
+        /* width: 100vw; */ 
+    }
+
+    .sideDiv{
+         display: flex;
+         flex-direction: row;
+        background-color: #3C79F5;
+         border:2px solid red;
+         align-items: center; /* Center items horizontally */
+         transform: skewX(0deg); /* Adjust the angle of the tilt */
+         transform-origin: top;
+     }
+    
+     .Logo{
+       background-color: #3C79F5;
+        color: white;
+        margin-left: 50px;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+     .board{
+       background-color: #3C79F5;
+        color: white;
+        margin: auto;
+        font-weight: bold;
+        font-size: 50px;
+        border:5px solid black;
+    }
+    
+    .icons{
+        background-color: #3C79F5;
+        margin: auto;
+        border:2px solid green;
+    }
+    .github{
+        background-color: #3C79F5;
+        color: white;
+        font-size: large;
+        margin-left: 20px ;
+    }
+
+     .formDiv{
+        /* margin-top: 300px; */
+        flex: 6;
+        display: flex;
+        align-items: center;
+        padding: 50px 0px;
+        justify-content: center;
+        flex-direction: column;
+        /* margin-left: 200px; */
+        margin: auto;
+   }
+  
+   .signinForm{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: auto;
+    flex-direction: column;
+    
+}
+
+   .whiteDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    /* height: 300px;
+    width:400px */
+    height: 50%;
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+.signup{
+     margin-top: 20px;
+}
+  }
+  
