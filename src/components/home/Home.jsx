@@ -87,14 +87,14 @@ function Home() {
         <div className='main-cards'>
             <div className='card'>
             <div className='iconDiv'>
-             <AttachMoney className='card_icon'/>
+            <AttachMoney className='card_icon'/>
             </div>
             
                 <div className='card-inner'>
-                    <p>Total Revenues</p>
+                    <p class="card_inner_text">Total Revenues</p>
                     <div className='twop'>
                       <p>$2,129,430</p>
-                      <p>+2.5%</p>
+                      <p className="percenti">+2.5%</p>
                     </div>
                    
                 </div>
@@ -102,14 +102,14 @@ function Home() {
             </div>
             <div className='card'>
             <div className='iconDiv'>
-            <EventNote className='card_icon'/>
+            <EventNote className='card_icon' id="icon2"/>
             </div>
             
                 <div className='card-inner'>
-                    <p>Total Transactions</p>
+                    <p class="card_inner_text">Total Transactions</p>
                     <div className='twop'>
                       <p>1,520</p>
-                      <p>+1.7%</p>
+                      <p className="percenti">+1.7%</p>
                     </div>
                     
                 </div>
@@ -117,13 +117,13 @@ function Home() {
             </div>
             <div className='card'>
             <div className='iconDiv'>
-            <ThumbsUpDown className='card_icon'/>
+            <ThumbsUpDown className='card_icon' id="icon3"/>
             </div>
             
                 <div className='card-inner'>
-                    <p>Total Likes</p>
+                    <p class="card_inner_text">Total Likes</p>
                     <div className='twop'>
-                      <p >9,721</p>
+                      <p>9,721</p>
                       <p>+1.4%</p>
                     </div>
                    
@@ -132,14 +132,14 @@ function Home() {
             </div>
             <div className='card'>
             <div className='iconDiv'>
-            <Group className='card_icon'/>
+            <Group className='card_icon' id='icon4'/>
             </div>
                
                 <div className='card-inner'>
-                    <p>Total Users</p>
+                    <p className="card_inner_text">Total Users</p>
                     <div className='twop'>
                       <p>9,721</p>
-                      <p>+4.2%</p>
+                      <p className="percenti">+4.2%</p>
                     </div>
                     
                 </div>
