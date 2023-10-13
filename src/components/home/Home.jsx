@@ -1,101 +1,175 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import 
 { BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill}
  from 'react-icons/bs'
  import 
  { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } 
  from 'recharts';
+import Chart from './Chart';
+import { Add, AddCircleOutline, AttachMoney, EventNote, FiberManualRecord, Group, Money, ThumbsUpDown } from '@mui/icons-material';
+import Modal from './Modal';
+
+
+
+
+
 
 function Home() {
-
+    const data1 = [
+        { name: 'Group A', value: 400 },
+        { name: 'Group B', value: 300 },
+        { name: 'Group C', value: 300 },
+        { name: 'Group D', value: 200 },
+      ];
+     
+        
+      const [isVisible,setIsVisible]=useState(false)  
+      const openModal = () => {
+        setIsVisible(true);
+      };
+    
+      // Function to close the modal
+      const closeModal = () => {
+        setIsVisible(false);
+      };
+    
+      // Add an event listener to handle clicks outside the modal
+      useEffect(() => {
+        const handleOutsideClick = (e) => {
+          if (isVisible && e.target.classList.contains('modal-wrapper')) {
+            closeModal();
+          }
+        };
+    
+        if (isVisible) {
+          document.addEventListener('click', handleOutsideClick);
+        }
+    
+        return () => {
+          document.removeEventListener('click', handleOutsideClick);
+        };
+      }, [isVisible]);
+    
     const data = [
         {
-          name: 'Page A',
-          uv: 4000,
-          pv: 2400,
+          name: 'Week 1',
+          uv: 500,
+          pv: 400,
           amt: 2400,
         },
         {
-          name: 'Page B',
-          uv: 3000,
-          pv: 1398,
+          name: 'Week 2',
+          uv: 350,
+          pv: 450,
           amt: 2210,
         },
         {
-          name: 'Page C',
-          uv: 2000,
-          pv: 9800,
+          name: 'Week 3',
+          uv: 200,
+          pv: 300,
           amt: 2290,
         },
         {
-          name: 'Page D',
-          uv: 2780,
-          pv: 3908,
+          name:  'Week 4',
+          uv: 400,
+          pv: 350,
           amt: 2000,
-        },
-        {
-          name: 'Page E',
-          uv: 1890,
-          pv: 4800,
-          amt: 2181,
-        },
-        {
-          name: 'Page F',
-          uv: 2390,
-          pv: 3800,
-          amt: 2500,
-        },
-        {
-          name: 'Page G',
-          uv: 3490,
-          pv: 4300,
-          amt: 2100,
         },
       ];
      
 
   return (
-    <main className='main-container'>
-        <div className='main-title'>
+    <main className='main-container' >
+        {/* <div className='main-title'>
             <h3>DASHBOARD</h3>
-        </div>
+        </div> */}
 
         <div className='main-cards'>
             <div className='card'>
+            <div className='iconDiv'>
+            <AttachMoney className='card_icon'/>
+            </div>
+            
                 <div className='card-inner'>
-                    <h3>PRODUCTS</h3>
-                    <BsFillArchiveFill className='card_icon'/>
+                    <p>Total Revenues</p>
+                    <div className='twop'>
+                      <p>$2,129,430</p>
+                      <p>+2.5%</p>
+                    </div>
+                   
                 </div>
-                <h1>300</h1>
+               
             </div>
             <div className='card'>
+            <div className='iconDiv'>
+            <EventNote className='card_icon'/>
+            </div>
+            
                 <div className='card-inner'>
-                    <h3>CATEGORIES</h3>
-                    <BsFillGrid3X3GapFill className='card_icon'/>
+                    <p>Total Transactions</p>
+                    <div className='twop'>
+                      <p>1,520</p>
+                      <p>+1.7%</p>
+                    </div>
+                    
                 </div>
-                <h1>12</h1>
+               
             </div>
             <div className='card'>
+            <div className='iconDiv'>
+            <ThumbsUpDown className='card_icon'/>
+            </div>
+            
                 <div className='card-inner'>
-                    <h3>CUSTOMERS</h3>
-                    <BsPeopleFill className='card_icon'/>
+                    <p>Total Likes</p>
+                    <div className='twop'>
+                      <p>9,721</p>
+                      <p>+1.4%</p>
+                    </div>
+                   
                 </div>
-                <h1>33</h1>
+              
             </div>
             <div className='card'>
+            <div className='iconDiv'>
+            <Group className='card_icon'/>
+            </div>
+               
                 <div className='card-inner'>
-                    <h3>ALERTS</h3>
-                    <BsFillBellFill className='card_icon'/>
+                    <p>Total Users</p>
+                    <div className='twop'>
+                      <p>9,721</p>
+                      <p>+4.2%</p>
+                    </div>
+                    
                 </div>
-                <h1>42</h1>
+               
             </div>
         </div>
 
         <div className='charts'>
-            <ResponsiveContainer width="100%" height="100%">
+           <div className='innerCharts'>
+             <div className='info'>
+               <p className='Act'>Activities</p>
+               <p className='date'>
+                May-June 2021
+               </p>
+             </div>
+             <div className='tags'>
+               <div className='guest'>
+                 <FiberManualRecord className='guestIcon'/>
+                 Guest
+               </div>
+               <div className='user'>
+                 <FiberManualRecord className='userIcon'/>
+                 User
+               </div>
+             </div>
+           </div>
+            <ResponsiveContainer width="100%" height="100%" className="barChart">
             <BarChart
-            width={500}
-            height={300}
+            width={200}
+            height={200}
             data={data}
             margin={{
                 top: 5,
@@ -104,39 +178,76 @@ function Home() {
                 bottom: 5,
             }}
             >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
+                <CartesianGrid strokeDasharray="0"  />
+                {/* <XAxis dataKey="name" tick={false} /> */}
+                {/* <YAxis /> */}
+                <XAxis dataKey="name" axisLine={false}  />
+                <YAxis
+                    axisLine={false} // Set axisLine to false to remove the Y-axis lines
+                    tickLine={false} // Set tickLine to false to remove tick lines
+                />
                 <Tooltip />
-                <Legend />
-                <Bar dataKey="pv" fill="#8884d8" />
-                <Bar dataKey="uv" fill="#82ca9d" />
+                {/* <Legend /> */}
+                <Bar dataKey="pv" fill="#98D89E" barSize={38}/>
+                <Bar dataKey="uv" fill="#EE8484" barSize={38}/>
                 </BarChart>
             </ResponsiveContainer>
 
-            <ResponsiveContainer width="100%" height="100%">
-                <LineChart
-                width={500}
-                height={300}
-                data={data}
-                margin={{
-                    top: 5,
-                    right: 30,
-                    left: 20,
-                    bottom: 5,
-                }}
-                >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-                <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-                </LineChart>
-            </ResponsiveContainer>
+           
+        
 
         </div>
+        <div className='bottomDiv'>
+        <div className='pieChart'>
+          <div className='innerPie'>
+            <p className='top'>Top Products</p>
+            <p className='newDate'>May-June 2021</p>
+          </div>
+          <div className='PieDiv'>
+            <Chart className="mainGraph"/>
+            <div className='detailDiv'>
+                <div className='comp3'>
+                 <FiberManualRecord className='tees'/>
+                 <div className='comp2'>
+                   <p className='product'>Basic Tees</p>
+                   <p className='percent'>
+                    55%
+                   </p>
+                 </div>
+                </div>
+                <div className='comp3'>
+                 <FiberManualRecord className='pants'/>
+                 <div className='comp2'>
+                   <p className='product'>Custom Short Pants</p>
+                   <p className='percent'>
+                    31%
+                   </p>
+                 </div>
+                </div>
+                <div className='comp3'>
+                 <FiberManualRecord className='hoodies'/>
+                 <div className='comp2'>
+                   <p className='product'>Super Hoodies</p>
+                   <p className='percent'>
+                    14%
+                   </p>
+                 </div>
+                </div>
+            </div>
+          </div>
+          
+        </div>
+         
+         <div className='Add' onClick={()=>{setIsVisible(true)}}>
+            <div className='plusDiv'>
+              <Add className='plus' fontSize='large'/>
+            </div>
+            <p className='addProfile'>Add Profile</p>
+            
+         </div>
+         
+        </div>
+        {isVisible && <Modal/>}
     </main>
   )
 }
