@@ -87,7 +87,7 @@ function Home() {
         <div className='main-cards'>
             <div className='card'>
             <div className='iconDiv'>
-            <AttachMoney className='card_icon'/>
+             <AttachMoney className='card_icon'/>
             </div>
             
                 <div className='card-inner'>
@@ -123,7 +123,7 @@ function Home() {
                 <div className='card-inner'>
                     <p>Total Likes</p>
                     <div className='twop'>
-                      <p>9,721</p>
+                      <p >9,721</p>
                       <p>+1.4%</p>
                     </div>
                    

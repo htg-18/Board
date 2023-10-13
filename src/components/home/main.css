@@ -1,7 +1,7 @@
  .body{
     margin: 0;
     padding: 0;
-    background-color: blue;
+    /* background-color: blue; */
     color: #9e9ea4;
     font-family: 'Montserrat', sans-serif;
   }
@@ -196,7 +196,24 @@
   .card-inner > .card_icon {
     font-size: 25px;
   }
-  
+  .top{
+    color: #000;
+
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+background-color: transparent;
+  }
+  .newDate{
+    color:  #858585;
+font-family: Montserrat;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+ background-color: transparent;
+  }
   .charts {
     display: grid;
     grid-template-columns: 1fr ;
@@ -215,33 +232,41 @@ box-shadow: 2px 0px 20px -3px rgba(0,0,0,0.24);
     font-size: 18px;
     font-weight: 700;
     color: black;
+    background-color: transparent;
   }
   .date{
     font-size: 14px;
     font-weight: 400;
     color: black;
+    background-color: transparent;
   }
   .info{
     flex-direction: column;
-
+    background-color: transparent;
   }
+
   .tags{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin-right: 10px;
+    background-color: transparent;
   }
   .guestIcon{
     color: #7FCD93;
+    background-color: transparent;
   }
   .userIcon{
     color: #EE8484;
+    background-color: transparent;
   }
   .guest{
     color: black;
+    background-color: transparent;
   }
   .user{
     color: black;
+    background-color: transparent;
   }
   .barChart{
     background-color: transparent;
@@ -254,6 +279,16 @@ box-shadow: 2px 0px 20px -3px rgba(0,0,0,0.24);
     margin-left: 15px;
     background-color: transparent;
     margin-bottom: 0px;
+  }
+  .card-inner{
+    background-color: transparent;
+  }
+  p{
+    background-color: transparent;
+  }
+  .twop{
+    background-color: transparent;
+    
   }
   .iconDiv{
     border-radius: 50%;
@@ -291,6 +326,7 @@ box-shadow: 2px 0px 20px -3px rgba(0,0,0,0.24);
     justify-content: space-between;
     margin: 10px;
     margin-bottom: 0;
+    background-color: transparent;
   }
   .mainGraph{
     position: relative;
@@ -318,6 +354,7 @@ box-shadow: 2px 0px 20px -3px rgba(0,0,0,0.24);
   .comp3{
     display: flex;
     margin-bottom: 15px;
+    
   }
   .comp2{
     display: flex;
@@ -354,6 +391,14 @@ max-height: 200px;
     margin-top: 10px;
     font-size: 16px;
     font-weight: 600;
+  }
+  .product{
+    font-size: 14px;
+    background-color: transparent;
+  }
+  .percent{
+    font-size: 12px;
+    background-color: transparent;
   }
   /* End Main  */
   

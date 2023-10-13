@@ -139,6 +139,7 @@
     border: none;
     margin-bottom: 10px;
     padding-left: 9px;
+    background-color: #F5F5F5;
 }
 .password{
     border-radius: 10px;
@@ -148,6 +149,7 @@
     border: none;
     margin-bottom: 10px;
     padding-left: 9px;
+    background-color: #F5F5F5;
 }
 .forgot{
     color: #3C79F5;

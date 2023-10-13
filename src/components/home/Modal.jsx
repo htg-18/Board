@@ -124,6 +124,9 @@ const Modal = () => {
             </>
           )}
         </div>
+        <div>
+          <button></button>
+        </div>
       </div>
     </>
   );
