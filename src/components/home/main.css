@@ -1,8 +1,13 @@
+ * {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+ 
  .body{
     margin: 0;
     padding: 0;
-    background-color: blue;
-    color: #9e9ea4;
+    color: #020202;
     font-family: 'Montserrat', sans-serif;
   }
  
@@ -126,7 +131,7 @@
     overflow-y: auto;
     height: 100%;
     padding: 20px 20px;
-    /* color: rgba(255, 255, 255, 0.95); */
+    background-color: #f8faff;
   }
   
   .main-title {
@@ -148,6 +153,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: start;
     padding: 8px 15px;
     border-radius: 5px;
     background-color: white;
@@ -161,10 +167,23 @@
     background-color: white;
     color: black;
   }
+  .card_inner_text{
+    background-color: white;
+   align-self: flex-start;
+  }
+
+  .percenti{
+    font-size:10px;
+    color: #3cc952;
+    background-color: #e9f9eb;
+    border-radius: 34px;
+  }
+
   .twop{
+    width:189px;
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: center;
     justify-content: space-between;
   }
   .iconref{
@@ -244,24 +263,42 @@ box-shadow: 2px 0px 20px -3px rgba(0,0,0,0.24);
     color: black;
   }
   .barChart{
-    background-color: transparent;
+    background-color: white !important;
+  
   }
   .innerCharts{
+    background-color: white !important;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top:15px;
     margin-left: 15px;
-    background-color: transparent;
     margin-bottom: 0px;
   }
-  .iconDiv{
+  .card_icon{
     border-radius: 50%;
     height: 20px;
     width: 20px;
     color: white;
-    background-color: #7FCD93;
+
   }
+
+#icon1{
+  background-color: #7fcd93;
+}
+
+#icon2{
+  background-color: #DEBF85;
+}
+
+#icon3{
+  background-color: #eca4a4;
+}
+
+#icon4{
+  background-color: #a9b0e5;
+}
+
   .bottomDiv{
     display: grid;
     /* align-items: center;
@@ -293,6 +330,7 @@ box-shadow: 2px 0px 20px -3px rgba(0,0,0,0.24);
     margin-bottom: 0;
   }
   .mainGraph{
+    border:2px solid red;
     position: relative;
     left:10px
   }
@@ -308,13 +346,15 @@ box-shadow: 2px 0px 20px -3px rgba(0,0,0,0.24);
   .PieDiv{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
   }
   .detailDiv{
+    margin-left: 50px;
     display: flex;
     flex-direction: column;
   }
+
   .comp3{
     display: flex;
     margin-bottom: 15px;
