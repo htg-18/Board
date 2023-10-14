@@ -78,7 +78,7 @@
       color: white !important;
       background-color: transparent;
       /* font-size: larger !important; */
-      font-weight: 600px !important;
+      font-weight: 600 !important;
     }
     .header-right{
       background-color: #3C79F5 !important;
@@ -101,6 +101,9 @@
     }
     .eandne{
       flex-direction: column !important;
+    }
+    .charts{
+      flex: 2;
     }
   }
   .dash{
@@ -169,6 +172,7 @@
       on small screens
     */
     z-index: 12 !important;
+    background-color: #3C79F5;
   }
   
   /* End Sidebar  */
@@ -505,7 +509,9 @@ max-height: 200px;
         'header'
         'main';
     }
-  
+    /* .charts{
+      height: 300px;
+    } */
     #sidebar {
       display: none;
     }
@@ -525,7 +531,7 @@ max-height: 200px;
       height: 600px;
     }
     .innerCharts{
-      height: 600px;
+      height: 400px;
     }
     .Add{
       height: 300px;

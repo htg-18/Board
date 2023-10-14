@@ -35,28 +35,7 @@ function Home({uid}) {
       const closeModal = () => {
         setIsVisible(false);
       };
-      
-      // useEffect(() => {
-     
-         
-      //       const name = ref(db, 'userDataRecord/' + uid + '/name');
-      //       const email = ref(db, 'userDataRecord/' + uid + '/email');
-      //       const phone = ref(db, 'userDataRecord/' + uid + '/phone');
-      //       const instagram = ref(db, 'userDataRecord/' + uid + '/instagram');
-      //       const youtube = ref(db, 'userDataRecord/' + uid + '/youtube');
-      //       onValue(name, (snapshot) => {
-      //         const data = snapshot.val();
-      //         // updateStarCount(postElement, data);
-      //       });
-      //       console.log(name);
-        
-      // }, []);
-      
-      // useEffect(() =>{
-      //   async function getData(){
-      //     const 
-      //   }
-      // },[]);
+    
       
       useEffect(() => {
         // Log the userData when it changes
