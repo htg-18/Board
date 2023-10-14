@@ -49,7 +49,7 @@ const Modal = ({setUserHome,uid}) => {
     setIsModalOpen(false);
     const res=await fetch("https://my-project-318dc-default-rtdb.firebaseio.com/userDataRecord.json",
     {
-    method:"POST",
+      method:"POST",
       headers :{
         "Content-Type": "application/json" ,
       },

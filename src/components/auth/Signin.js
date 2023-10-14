@@ -60,15 +60,16 @@ const Signin = () => {
        <div className='formDiv'>
        {!reg && 
         <form onSubmit={signIn} className='signinForm'>
-         <h1 id="h1">SignIn</h1>
+         <h1 className="h1">SignIn</h1>
          <p className='text'>Sign in to your account</p>
          <div className='buttons'>
             <button className='google' onClick={handleGoogle}>
-            <img src='/google.jpg' alt="Google Logo" className='image'/>
+            
+            <img src='/apple.jpg' className='image'/>
              <span className='p'>Sign in With Google</span>
             </button>
             <button className='apple' onClick={handleGoogle}>
-            <img src='/apple.jpg' className='image'/>
+            <img src='/google.jpg' alt="Google Logo" className='image'/>
              <span className='p'>Sign in With Apple</span>
             </button>
          </div>
@@ -108,7 +109,7 @@ const Signin = () => {
        {
         reg &&
         <form onSubmit={signUp} className='signinForm'>
-         <h1>Sign Up</h1>
+         <h1 className='h1'>Sign Up</h1>
          <p className='text'>Create a new Account</p>
          <div className='buttons'>
             <button className='google' onClick={handleGoogle}>
