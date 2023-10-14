@@ -4,15 +4,16 @@
     color: black;
     position: fixed;
     height: 50%;
-    width:33%;
-    top: 50%;
+    width:33% ;
+    top: 50% ;
     transform: translate(-50%,-50%);
     left: 50%;
     padding: 10px;
     border-radius: 20px;
     padding-top: 16px;
+    font-family: 'Figtree', sans-serif;
 }
-@media(max-height:990px){
+@media (max-width:990px){
     .modalContainer{
         height: 60%;
         width: 65%;

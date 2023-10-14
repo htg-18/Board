@@ -60,7 +60,7 @@ const Signin = () => {
        <div className='formDiv'>
        {!reg && 
         <form onSubmit={signIn} className='signinForm'>
-         <h1>SignIn</h1>
+         <h1 id="h1">SignIn</h1>
          <p className='text'>Sign in to your account</p>
          <div className='buttons'>
             <button className='google' onClick={handleGoogle}>

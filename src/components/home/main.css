@@ -32,8 +32,11 @@
   .close_icon {
     color: red;
     margin-left: 30px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     cursor: pointer;
+    position: absolute;
+    right:30px;
+    top:40px;
   }
   
   .grid-container {
@@ -225,6 +228,7 @@
   .card_inner_text{
     background-color: white;
    align-self: flex-start;
+   font-weight: 300;
   }
 
   .percenti{
@@ -515,7 +519,14 @@ max-height: 200px;
     #sidebar {
       display: none;
     }
-  
+    
+   .sidebar-responsive{
+    /* height: auto; */
+    width:300px !important;
+    height: auto !important;
+    margin:0px !important;
+   }
+
     .menu-icon {
       color: #3C79F5;
       background-color: transparent;
@@ -530,14 +541,13 @@ max-height: 200px;
       flex-direction: column;
       height: 600px;
     }
-    .innerCharts{
-      height: 400px;
-    }
+   
     .Add{
       height: 300px;
       display: flex;
       flex-direction: column;
-      /* align-items: start; */
+      align-items: center;
+      justify-content: center;
     }
     .card{
       height: 90px;

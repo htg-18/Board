@@ -276,12 +276,12 @@ function Home({uid}) {
                 <div className='instagram'>
                   <div className='iDiv'><Instagram className='iIcon'/></div>
                     
-                    {userHome.instagram?userHome.instagram:"-"}
+                    {userHome.instagram?userHome.instagram:"?"}
                   </div>
                 <div className='youtube'>
                    <div className='yDiv'><PlayCircleOutline className='yIcon'/></div>
                    
-                   {userHome.youtube?userHome.youtube:"-"}
+                   {userHome.youtube?userHome.youtube:"?"}
                 </div>
                 
               </div>
