@@ -6,15 +6,18 @@ import
  { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } 
  from 'recharts';
 import Chart from './Chart';
-import { Add, AddCircleOutline, AttachMoney, EventNote, FiberManualRecord, Group, Money, ThumbsUpDown } from '@mui/icons-material';
+import { Add, AddCircleOutline, AttachMoney, EventNote, FiberManualRecord, Group, Instagram, MailOutline, Money, PlayCircle, PlayCircleOutline, Recommend, Sell, ThumbsUpDown, WhatsApp, YouTube } from '@mui/icons-material';
 import Modal from './Modal';
+import { getDatabase, ref, child, get } from "firebase/database";
+import { db } from '../../firebase';
+// import { uid } from 'uid';
+import { set, onValue, remove, update } from "firebase/database";
 
 
 
 
 
-
-function Home() {
+function Home({uid}) {
     const data1 = [
         { name: 'Group A', value: 400 },
         { name: 'Group B', value: 300 },
@@ -22,7 +25,7 @@ function Home() {
         { name: 'Group D', value: 200 },
       ];
      
-        
+      const [userHome,setUserHome]=useState('')
       const [isVisible,setIsVisible]=useState(false)  
       const openModal = () => {
         setIsVisible(true);
@@ -32,7 +35,35 @@ function Home() {
       const closeModal = () => {
         setIsVisible(false);
       };
-    
+      
+      // useEffect(() => {
+     
+         
+      //       const name = ref(db, 'userDataRecord/' + uid + '/name');
+      //       const email = ref(db, 'userDataRecord/' + uid + '/email');
+      //       const phone = ref(db, 'userDataRecord/' + uid + '/phone');
+      //       const instagram = ref(db, 'userDataRecord/' + uid + '/instagram');
+      //       const youtube = ref(db, 'userDataRecord/' + uid + '/youtube');
+      //       onValue(name, (snapshot) => {
+      //         const data = snapshot.val();
+      //         // updateStarCount(postElement, data);
+      //       });
+      //       console.log(name);
+        
+      // }, []);
+      
+      // useEffect(() =>{
+      //   async function getData(){
+      //     const 
+      //   }
+      // },[]);
+      
+      useEffect(() => {
+        // Log the userData when it changes
+        if (userHome) {
+          console.log('Received UserData:', userHome);
+        }
+      }, [userHome]);
       // Add an event listener to handle clicks outside the modal
       useEffect(() => {
         const handleOutsideClick = (e) => {
@@ -87,7 +118,7 @@ function Home() {
         <div className='main-cards'>
             <div className='card'>
             <div className='iconDiv'>
-            <AttachMoney className='card_icon'/>
+            <AttachMoney className='card_icon' id="icon1"/>
             </div>
             
                 <div className='card-inner'>
@@ -102,7 +133,7 @@ function Home() {
             </div>
             <div className='card'>
             <div className='iconDiv'>
-            <EventNote className='card_icon' id="icon2"/>
+            <Sell className='card_icon' id="icon2"/>
             </div>
             
                 <div className='card-inner'>
@@ -117,14 +148,14 @@ function Home() {
             </div>
             <div className='card'>
             <div className='iconDiv'>
-            <ThumbsUpDown className='card_icon' id="icon3"/>
+            <Recommend className='card_icon' id="icon3"/>
             </div>
             
                 <div className='card-inner'>
                     <p class="card_inner_text">Total Likes</p>
                     <div className='twop'>
                       <p>9,721</p>
-                      <p>+1.4%</p>
+                      <p className="percenti">+1.4%</p>
                     </div>
                    
                 </div>
@@ -157,11 +188,11 @@ function Home() {
              </div>
              <div className='tags'>
                <div className='guest'>
-                 <FiberManualRecord className='guestIcon'/>
+                 <FiberManualRecord className='guestIcon' fontSize='small'/>
                  Guest
                </div>
                <div className='user'>
-                 <FiberManualRecord className='userIcon'/>
+                 <FiberManualRecord className='userIcon' fontSize='small'/>
                  User
                </div>
              </div>
@@ -239,15 +270,49 @@ function Home() {
         </div>
          
          <div className='Add' onClick={()=>{setIsVisible(true)}}>
-            <div className='plusDiv'>
+            {!userHome &&<> <div className='plusDiv'>
               <Add className='plus' fontSize='large'/>
             </div>
             <p className='addProfile'>Add Profile</p>
             
-         </div>
-         
+         </> }
+         {
+          userHome && <>
+            <div className='userHome'>
+              <p className='userName'>{userHome.name}</p>
+              <div className='eandne'>
+              <div className='essential'>
+                <div className='phoneNo'>
+                  <div className='wDiv'> <WhatsApp className='wIcon' fontSize='medium'/></div>
+                  
+                  {userHome.phone}
+                </div>
+                <div className='emailAdd'>
+                  <div className='eDiv'> <MailOutline className='eIcon'/></div>
+                 
+                  {userHome.email}
+                </div>
+              </div>
+              <div className='non'>
+                <div className='instagram'>
+                  <div className='iDiv'><Instagram className='iIcon'/></div>
+                    
+                    {userHome.instagram?userHome.instagram:"-"}
+                  </div>
+                <div className='youtube'>
+                   <div className='yDiv'><PlayCircleOutline className='yIcon'/></div>
+                   
+                   {userHome.youtube?userHome.youtube:"-"}
+                </div>
+                
+              </div>
+              </div>
+            </div>
+          </>
+         }
+         </div> 
         </div>
-        {isVisible && <Modal/>}
+        {isVisible && <Modal setUserHome={setUserHome} uid={uid}/>}
     </main>
   )
 }

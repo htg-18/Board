@@ -57,6 +57,49 @@
     padding: 20px 20px 0 15px;
     /* box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35); */
   }
+  @media (max-width: 990px) {
+    .header{
+      background-color: #3C79F5;
+      color: white;
+    }
+    .ic{
+      width: 30px;
+      height: 30px;
+    }
+    .menu-icon{
+      background-color: transparent;
+      color: white;
+    }
+    .ic{
+      background-color: transparent;
+      color: white;
+    }
+    .dash{
+      color: white !important;
+      background-color: transparent;
+      /* font-size: larger !important; */
+      font-weight: 600px !important;
+    }
+    .header-right{
+      background-color: #3C79F5 !important;
+      color: white !important;
+    }
+    .searchDiv{
+      background-color: #3C79F5 !important;
+      color: white !important;
+    }
+    /* .search{
+      background-color: #3C83F9 !important;
+      color: white !important;
+    } */
+    .Headericon{
+      background-color: #3C79F5 !important;
+      color: white !important;
+    }
+    .sch{
+      display: none !important;
+    }
+  }
   .dash{
     font-size: 24px;
     color: black;
@@ -69,7 +112,11 @@
   
   /* Sidebar  */
   
+  /* 
   
+  
+  
+  */
   .sidebar-title {
     display: flex;
     justify-content: space-between;
@@ -132,7 +179,7 @@
     overflow-y: auto;
     height: 100%;
     padding: 20px 20px;
-    background-color: #f8faff;
+    /* background-color: #f8faff; */
   }
   
   .main-title {
@@ -283,10 +330,12 @@ box-shadow: 2px 0px 20px -3px rgba(0,0,0,0.24);
   .guest{
     color: black;
     background-color: transparent;
+    padding-right: 20px;
   }
   .user{
     color: black;
     background-color: transparent;
+    padding-right: 20px;
   }
   .barChart{
     background-color: white !important;
@@ -310,19 +359,27 @@ box-shadow: 2px 0px 20px -3px rgba(0,0,0,0.24);
   }
 
 #icon1{
+  border-radius: 50%;
   background-color: #7fcd93;
+  color: #F8FAFF;
 }
 
 #icon2{
+  border-radius: 50%;
   background-color: #DEBF85;
+  color: #F8FAFF;
 }
 
 #icon3{
+  border-radius: 50%;
   background-color: #eca4a4;
+  color: #F8FAFF;
 }
 
 #icon4{
+  border-radius: 50%;
   background-color: #a9b0e5;
+  color: #F8FAFF;
 }
 
   .bottomDiv{
@@ -426,6 +483,7 @@ max-height: 200px;
   .product{
     font-size: 14px;
     background-color: transparent;
+    margin-bottom: 5px;
   }
   .percent{
     font-size: 12px;
@@ -483,7 +541,7 @@ max-height: 200px;
   }
   #sidebar {
     grid-area: sidebar;
-    height: 100%;
+    height: 90%;
     /* background-color: #263043; */
     overflow-y: auto;
     transition: all 0.5s;
@@ -519,6 +577,7 @@ max-height: 200px;
     outline: none;
     border: none;
     padding: 10px;
+    border: 0.2px solid black;
   }
   .sch{
     background-color: white;
@@ -534,9 +593,26 @@ max-height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
+
   }
   .search-icon {
     margin-left: -30px; /* Adjust the margin as needed to control the icon's position */
+  }
+  .userHome{
+    /* padding: 20px; */
+    width: 75%;
+    height: 75%;
+  }
+  .userName{
+    flex: 1.5;
+    color: #000;
+
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Figtree;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px
   }
   .searchDiv{
     background-color: white;
@@ -546,4 +622,66 @@ max-height: 200px;
     align-items: center;
     justify-content: space-between;
   }
+  .userHome{
+    display: flex;
+    flex-direction: column;
+  }
+  .eandne{
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    color:  #231F20;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Figtree;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 171.429% */
+text-decoration-line: underline;
+align-items: center;
+justify-content: space-between;
+  }
+  .lastIcon{
+    width: 15px;
+    height: 15px;
+    /* color: green; */
+    border-radius: 50%;
+  }
+  .wIcon{
+    color: #3CC952;
+    background-color: #E9F9EB;
+    
+    border-radius: 50%;
+  }
+  .eIcon{
+    color: #5C33CF;
+    background-color: #EBE6F9;
+    border-radius: 50%;
+  }
+  .iIcon{
+    color: #FF4E64;
+    background-color: #FFE9EC;
+    border-radius: 50%;
+  }
+  .yIcon{
+    color: #FF0000;
+    background-color: #FFE9E9;
+    border-radius: 50%;
+  }
+  .phoneNo,.emailAdd,.youtube,.instagram{
+    display: flex;
+    align-items: center;
+    
+  }
+  .wDiv,.eDiv,.iDiv,.yDiv{
+   padding-right: 12px;
+  }
   
+  .essential{
+    display: flex;
+    flex-direction: column;
+  }
+  .non{
+   display: flex;
+   flex-direction: column;
+  }

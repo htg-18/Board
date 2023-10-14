@@ -7,17 +7,24 @@ import Main from '../home/Main'
 
 const AuthDetails = () => {
     const [authUser,setAuthUser]=useState(null)
+    const [uid,SetUid]=useState('')
     useEffect(()=>{
       const listen=onAuthStateChanged(auth,(user)=>{
         if(user){
-            setAuthUser(user)
+          // console.log(user)
+          SetUid(user.uid)
+            setAuthUser(user.uid)
         }else{
             setAuthUser(null)
         }
       })
     },[])
   return (
-    <div className='AuthDetails'>{authUser!==null?<Main/>:<Signin/>}</div>
+    <>
+    
+    <div className='AuthDetails'>{authUser!==null?<Main uid={uid}/>:<Signin/>}</div>
+    </>
+    
   )
 }
 
