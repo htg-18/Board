@@ -66,11 +66,11 @@ const Signin = () => {
             <button className='google' onClick={handleGoogle}>
             
             <img src='/apple.jpg' className='image'/>
-             <span className='p'>Sign in With Google</span>
+             <span className='p'>Sign in With Apple</span>
             </button>
             <button className='apple' onClick={handleGoogle}>
             <img src='/google.jpg' alt="Google Logo" className='image'/>
-             <span className='p'>Sign in With Apple</span>
+             <span className='p'>Sign in With Google</span>
             </button>
          </div>
          
@@ -113,11 +113,13 @@ const Signin = () => {
          <p className='text'>Create a new Account</p>
          <div className='buttons'>
             <button className='google' onClick={handleGoogle}>
-            <img src='/google.jpg' alt="Google Logo" className='image'/>
+            
+             
+            <img src='/apple.jpg' className='image'/>
              <span className='p'>Sign Up With Apple</span>
             </button>
             <button className='apple' onClick={handleGoogle}>
-            <img src='/apple.jpg' className='image'/>
+            <img src='/google.jpg' alt="Google Logo" className='image'/>
              <span className='p'>Sign Up With Google</span>
             </button>
          </div>
