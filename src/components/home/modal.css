@@ -14,7 +14,8 @@
 }
 @media(max-height:990px){
     .modalContainer{
-        height: 40%;
+        height: 60%;
+        width: 65%;
     }
 }
 .modal-wrapper {

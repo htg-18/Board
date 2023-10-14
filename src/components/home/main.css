@@ -99,6 +99,9 @@
     .sch{
       display: none !important;
     }
+    .eandne{
+      flex-direction: column !important;
+    }
   }
   .dash{
     font-size: 24px;
@@ -515,6 +518,23 @@ max-height: 200px;
   
     .sidebar-title > span {
       display: inline;
+    }
+    .bottomDiv{
+      display: flex;
+      flex-direction: column;
+      height: 600px;
+    }
+    .innerCharts{
+      height: 600px;
+    }
+    .Add{
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      /* align-items: start; */
+    }
+    .card{
+      height: 90px;
     }
   }
   /* Small <= 768px */
